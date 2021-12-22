@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\main">
+      <UniqueIdentifier>{cc600235-3ed2-4059-a471-e4caa9b0c761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\settings">
+      <UniqueIdentifier>{720ecb23-a4fc-412b-beb5-171ca8f27976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\localplayer">
+      <UniqueIdentifier>{f5bb54b5-13e9-4679-9865-360450a76354}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\const vars">
+      <UniqueIdentifier>{4ce5b3fa-1858-4ef9-bc41-6bad4873bc9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Vector3">
+      <UniqueIdentifier>{d8d4f424-1df9-4bc4-9032-971e7a58895d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\offsets">
+      <UniqueIdentifier>{a277feb8-6d81-40c4-8d7a-c73ca1fe99d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\hack modules">
+      <UniqueIdentifier>{de07ccfc-bbd5-4e5e-9dc3-b62fa264660e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MainApplication.cpp">
+      <Filter>Исходные файлы\main</Filter>
+    </ClCompile>
+    <ClCompile Include="bhop.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
+    <ClCompile Include="localPlayer.cpp">
+      <Filter>Исходные файлы\localplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="varsDefinition.cpp">
+      <Filter>Исходные файлы\const vars</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MainApplication.h">
+      <Filter>Исходные файлы\main</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Исходные файлы\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="localPlayer.h">
+      <Filter>Исходные файлы\localplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="constVars.h">
+      <Filter>Исходные файлы\const vars</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Исходные файлы\Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="offsets.hpp">
+      <Filter>Исходные файлы\offsets</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dumper.py">
+      <Filter>Исходные файлы</Filter>
+    </None>
+  </ItemGroup>
+</Project>
