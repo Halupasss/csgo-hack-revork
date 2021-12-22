@@ -34,12 +34,21 @@
     <Filter Include="Исходные файлы\hack modules">
       <UniqueIdentifier>{de07ccfc-bbd5-4e5e-9dc3-b62fa264660e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\entityList">
+      <UniqueIdentifier>{4d7caae1-9328-4efb-a3d1-1896b1f72a3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Engine">
+      <UniqueIdentifier>{6bc34e01-eecc-4578-8b78-f38432602e8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\entity">
+      <UniqueIdentifier>{645ec9fc-d090-4551-892e-7b015374fc72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MainApplication.cpp">
+    <ClCompile Include="mainApplication.cpp">
       <Filter>Исходные файлы\main</Filter>
     </ClCompile>
     <ClCompile Include="bhop.cpp">
@@ -51,12 +60,30 @@
     <ClCompile Include="varsDefinition.cpp">
       <Filter>Исходные файлы\const vars</Filter>
     </ClCompile>
+    <ClCompile Include="neonglow.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
+    <ClCompile Include="entityList.cpp">
+      <Filter>Исходные файлы\entityList</Filter>
+    </ClCompile>
+    <ClCompile Include="engine.cpp">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="noFlash.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
+    <ClCompile Include="aimBot.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MainApplication.h">
+    <ClInclude Include="mainApplication.h">
       <Filter>Исходные файлы\main</Filter>
     </ClInclude>
     <ClInclude Include="settings.h">
@@ -68,11 +95,20 @@
     <ClInclude Include="constVars.h">
       <Filter>Исходные файлы\const vars</Filter>
     </ClInclude>
-    <ClInclude Include="Vector3.h">
+    <ClInclude Include="vector3.h">
       <Filter>Исходные файлы\Vector3</Filter>
     </ClInclude>
     <ClInclude Include="offsets.hpp">
       <Filter>Исходные файлы\offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="entityList.h">
+      <Filter>Исходные файлы\entityList</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Исходные файлы\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Исходные файлы\entity</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

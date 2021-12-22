@@ -152,20 +152,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="aimBot.cpp" />
     <ClCompile Include="bhop.cpp" />
+    <ClCompile Include="engine.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entityList.cpp" />
+    <ClCompile Include="neonglow.cpp" />
+    <ClCompile Include="noFlash.cpp" />
     <ClCompile Include="varsDefinition.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="localPlayer.cpp" />
-    <ClCompile Include="MainApplication.cpp" />
+    <ClCompile Include="mainApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constVars.h" />
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="entityList.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="localPlayer.h" />
-    <ClInclude Include="MainApplication.h" />
+    <ClInclude Include="mainApplication.h" />
     <ClInclude Include="offsets.hpp" />
     <ClInclude Include="settings.h" />
-    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dumper.py" />

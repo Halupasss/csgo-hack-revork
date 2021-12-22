@@ -1,6 +1,6 @@
 ﻿#include "includes.h"
 
-C_MainApplication* pC_MainApplication = new C_MainApplication();
+C_MainApplication MainApplication;
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
@@ -10,7 +10,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        pC_MainApplication->run((HMODULE*)hModule);
+        MainApplication.run(hModule);
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:

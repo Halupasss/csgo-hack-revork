@@ -2,37 +2,54 @@
 
 C_LocalPlayer::C_LocalPlayer()
 {
-	this->pLocalPlayer = (uintptr_t*)(CLIENT + offsets::dwLocalPlayer);
-	this->pHealth	   = (uintptr_t*)(LOCALPLAYER + offsets::m_iHealth);
-	this->pArmor	   = (uintptr_t*)(LOCALPLAYER + offsets::m_ArmorValue);
-	this->pFlags	   = (uintptr_t*)(LOCALPLAYER + offsets::m_fFlags);
+
 }
 
 // getters
 uintptr_t C_LocalPlayer::getLocalPlayer()
 {
-	return *(uintptr_t*)this->pLocalPlayer;
+	return *(uintptr_t*)(LOCALPLAYER_ADDRESS);
 }
 
 int C_LocalPlayer::getHealth()
 {
-	return *(int*)this->pHealth;
+	return *(int*)(LOCALPLAYER + offsets::m_iHealth);
 }
 
-int C_LocalPlayer::getArmor()
+int C_LocalPlayer::getArmorValue()
 {
-	return *(int*)this->pArmor;
+	return *(int*)(LOCALPLAYER + offsets::m_ArmorValue);
 }
 
 int C_LocalPlayer::getFlags()
 {
-	return *(int*)this->pFlags;
+	return *(int*)(LOCALPLAYER + offsets::m_fFlags);
+}
+
+int C_LocalPlayer::getTeamNum()
+{
+	return *(int*)(LOCALPLAYER + offsets::m_iTeamNum);
+}
+
+int C_LocalPlayer::getFlashDuration()
+{
+	return *(int*)(LOCALPLAYER + offsets::m_flFlashDuration);
+}
+
+int C_LocalPlayer::getCrosshairID()
+{
+	return *(int*)(LOCALPLAYER + offsets::m_iCrosshairId);
 }
 
 // setters
 void C_LocalPlayer::setFlag(const uintptr_t flagType, const int flag)
 {
 	*(int*)(CLIENT + flagType) = flag;
+}
+
+void C_LocalPlayer::nullifyFlashDuration()
+{
+	*(int*)(LOCALPLAYER + offsets::m_flFlashDuration) = 0;
 }
 
 // methods
@@ -56,4 +73,10 @@ bool C_LocalPlayer::isAlive()
 	int health = this->getHealth();
 
 	return health >= 0;
+}
+
+// Vec3 
+Vec3 C_LocalPlayer::getPosition()
+{
+	return *(Vec3*)(LOCALPLAYER + offsets::m_vecOrigin);
 }

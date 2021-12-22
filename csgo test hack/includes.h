@@ -5,9 +5,12 @@
 #include <string>
 
 /* my shit */
-#include "MainApplication.h"
+#include "mainApplication.h"
+#include "vector3.h"
 #include "constVars.h"
-#include "Vector3.h"
+#include "entityList.h"
+#include "entity.h"
+#include "engine.h"
 #include "localPlayer.h"
 #include "settings.h"
 

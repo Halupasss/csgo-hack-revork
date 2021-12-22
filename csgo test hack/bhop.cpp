@@ -5,30 +5,35 @@
 #define or ||
 #define is ==
 
-C_LocalPlayer * pLocalPlayer = new C_LocalPlayer();
-
-void bhop()
+namespace bhop
 {
-	int localPlayerHealth = pLocalPlayer->getHealth();
-	int localPlayerArmor  = pLocalPlayer->getArmor();
-	int localPlayerFlags  = pLocalPlayer->getFlags();
+	static C_LocalPlayer localPlayer;
 
-	if (pLocalPlayer->isAlive())
+	void run()
 	{
-		if (localPlayerFlags is cVars::flags::fOnGround)
+		int localPlayerHealth = localPlayer.getHealth();
+		int localPlayerFlags = localPlayer.getFlags();
+
+		if (localPlayer.isAlive())
 		{
-			pLocalPlayer->jump();
+			if (localPlayerFlags is cVars::flags::fOnGround)
+			{
+				localPlayer.jump();
+			}
 		}
 	}
 }
 
-uintptr_t WINAPI hack::bhopThread(HMODULE hModule)
+uintptr_t __stdcall hack::bhopThread(HMODULE hModule)
 {
-	while (pC_MainApplication->hackstate is HACKSTATE_NORMAL)
+	while (MainApplication.hackstate is HACKSTATE_NORMAL)
 	{
 		if (settings::modules::bhop)
 		{
-			bhop();
+			if (GetAsyncKeyState(settings::keys::jumpButton))
+			{
+				bhop::run();
+			}		
 		}
 	}
 	FreeLibraryAndExitThread(hModule, 0);
