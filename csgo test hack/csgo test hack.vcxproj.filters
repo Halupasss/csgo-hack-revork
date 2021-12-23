@@ -43,6 +43,24 @@
     <Filter Include="Исходные файлы\entity">
       <UniqueIdentifier>{645ec9fc-d090-4551-892e-7b015374fc72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Menu">
+      <UniqueIdentifier>{90fef40a-c538-490c-b66a-3901122a7733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Menu\directxManager">
+      <UniqueIdentifier>{e0895125-8751-455f-a49d-5b4d638e63c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\hook">
+      <UniqueIdentifier>{a466c78d-8160-4174-af00-68d5ac9e4624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\hook\endscene">
+      <UniqueIdentifier>{548d90f0-7694-4419-bd41-f3f9ac391224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Menu\imgui">
+      <UniqueIdentifier>{eceb4085-2435-47f6-9f24-e737fe0be699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Menu\kiero">
+      <UniqueIdentifier>{cfcd7e93-915d-4d92-821b-c7944939b26c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -87,6 +105,57 @@
     <ClCompile Include="triggerBot.cpp">
       <Filter>Исходные файлы\hack modules</Filter>
     </ClCompile>
+    <ClCompile Include="menuManager.cpp">
+      <Filter>Исходные файлы\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="directxManager.cpp">
+      <Filter>Исходные файлы\Menu\directxManager</Filter>
+    </ClCompile>
+    <ClCompile Include="menuCustomStyle.cpp">
+      <Filter>Исходные файлы\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Исходные файлы\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="endscene.cpp">
+      <Filter>Исходные файлы\hook\endscene</Filter>
+    </ClCompile>
+    <ClCompile Include="dear_imgui\imgui.cpp">
+      <Filter>Исходные файлы\Menu\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="dear_imgui\imgui_demo.cpp">
+      <Filter>Исходные файлы\Menu\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="dear_imgui\imgui_draw.cpp">
+      <Filter>Исходные файлы\Menu\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="dear_imgui\imgui_impl_dx9.cpp">
+      <Filter>Исходные файлы\Menu\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="dear_imgui\imgui_impl_win32.cpp">
+      <Filter>Исходные файлы\Menu\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="dear_imgui\imgui_widgets.cpp">
+      <Filter>Исходные файлы\Menu\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="kiero\kiero.cpp">
+      <Filter>Исходные файлы\Menu\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="kiero\minhook\src\hook.c">
+      <Filter>Исходные файлы\Menu\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="kiero\minhook\src\trampoline.c">
+      <Filter>Исходные файлы\Menu\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="kiero\minhook\src\buffer.c">
+      <Filter>Исходные файлы\Menu\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="kiero\minhook\src\hde\hde32.c">
+      <Filter>Исходные файлы\Menu\kiero</Filter>
+    </ClCompile>
+    <ClCompile Include="kiero\minhook\src\hde\hde64.c">
+      <Filter>Исходные файлы\Menu\kiero</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes.h">
@@ -121,6 +190,12 @@
     </ClInclude>
     <ClInclude Include="defines.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="menuManager.h">
+      <Filter>Исходные файлы\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="directxManager.h">
+      <Filter>Исходные файлы\Menu\directxManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
 #pragma once
+#include "includes.h"
 
 #define HACKSTATE_NORMAL true
 #define HACKSTATE_OFF    false
@@ -9,6 +10,7 @@
 #define or ||
 #define is ==
 #define not_is !=
+#define is_not !=
 #define none NULL
 
 #define M_PI 3.14159265

@@ -9,19 +9,22 @@ namespace triggerBot
 	{
 		int crosshairID = localPlayer.getCrosshairID();	
 
-		C_Entity entity(crosshairID - 1);
-
-		if (not entity.isAlive())
-			return;
-
-		int localPlayerTeamNum = localPlayer.getTeamNum();
-		int entityTeam = entity.getTeamNum();
-
-		if (entityTeam != localPlayerTeamNum)
+		if ((crosshairID is_not null) and (crosshairID <= cVars::game::maxNumOfPlayersInServer))
 		{
-			localPlayer.shoot();
-			Sleep(settings::triggerBot::delay);
-		}	
+			C_Entity entity(crosshairID - 1);
+
+			if (not entity.isAlive())
+				return;
+
+			int localPlayerTeamNum = localPlayer.getTeamNum();
+			int entityTeam = entity.getTeamNum();
+
+			if (entityTeam is_not localPlayerTeamNum)
+			{
+				localPlayer.shoot();
+				Sleep(settings::triggerBot::delay);
+			}
+		}
 	}
 }
 

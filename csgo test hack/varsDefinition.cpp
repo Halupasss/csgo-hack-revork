@@ -26,15 +26,16 @@ size_t cVars::game::aimPunchAngleCoefficient = 2;
 size_t settings::keys::endButton = VK_END;
 size_t settings::keys::jumpButton = VK_SPACE;
 size_t settings::keys::aimBotKey = VK_ALT;
+size_t settings::keys::menuKey = VK_HOME;
 
 // modules
-bool settings::modules::bhop = true;
-bool settings::modules::neonGlow = true;
-bool settings::modules::noFlash = true;
-bool settings::modules::aimBot = true;
-bool settings::modules::radarHack = true;
-bool settings::modules::recoilControlSystem = true;
-bool settings::modules::triggerBot = true;
+bool settings::modules::bhop = false;
+bool settings::modules::neonGlow = false;
+bool settings::modules::noFlash = false;
+bool settings::modules::aimBot = false;
+bool settings::modules::radarHack = false;
+bool settings::modules::recoilControlSystem = false;
+bool settings::modules::triggerBot = false;
 
 // trigger bot
 size_t settings::triggerBot::delay = 65;

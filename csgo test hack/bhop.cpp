@@ -10,9 +10,9 @@ namespace bhop
 		int localPlayerFlags = localPlayer.getFlags();
 		Vec3 localPlayerVelocity = localPlayer.getVelocity();
 
-		if (localPlayerVelocity.x >= 0.1 or
-			localPlayerVelocity.y >= 0.1 or
-			localPlayerVelocity.z >= 0.1
+		if (localPlayerVelocity.x >= 0.01 or
+			localPlayerVelocity.y >= 0.01 or
+			localPlayerVelocity.z >= 0.01
 		) {
 			if (localPlayer.isAlive())
 			{

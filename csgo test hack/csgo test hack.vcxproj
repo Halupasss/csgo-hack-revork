@@ -76,6 +76,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)Lib\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -154,9 +156,26 @@
   <ItemGroup>
     <ClCompile Include="aimBot.cpp" />
     <ClCompile Include="bhop.cpp" />
+    <ClCompile Include="dear_imgui\imgui.cpp" />
+    <ClCompile Include="dear_imgui\imgui_demo.cpp" />
+    <ClCompile Include="dear_imgui\imgui_draw.cpp" />
+    <ClCompile Include="dear_imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="dear_imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="dear_imgui\imgui_widgets.cpp" />
+    <ClCompile Include="directxManager.cpp" />
+    <ClCompile Include="endscene.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="entityList.cpp" />
+    <ClCompile Include="kiero\kiero.cpp" />
+    <ClCompile Include="kiero\minhook\src\buffer.c" />
+    <ClCompile Include="kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="kiero\minhook\src\hook.c" />
+    <ClCompile Include="kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="menuCustomStyle.cpp" />
+    <ClCompile Include="menuManager.cpp" />
     <ClCompile Include="neonglow.cpp" />
     <ClCompile Include="noFlash.cpp" />
     <ClCompile Include="radarHack.cpp" />
@@ -170,12 +189,14 @@
   <ItemGroup>
     <ClInclude Include="constVars.h" />
     <ClInclude Include="defines.h" />
+    <ClInclude Include="directxManager.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="entityList.h" />
     <ClInclude Include="includes.h" />
     <ClInclude Include="localPlayer.h" />
     <ClInclude Include="mainApplication.h" />
+    <ClInclude Include="menuManager.h" />
     <ClInclude Include="offsets.hpp" />
     <ClInclude Include="settings.h" />
     <ClInclude Include="vector3.h" />

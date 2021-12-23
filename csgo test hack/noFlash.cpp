@@ -23,7 +23,7 @@ uintptr_t __stdcall hack::noFlashThread(HMODULE hModule)
 		{
 			noFlash::run();
 
-			Sleep(100);
+			Sleep(10000);
 		}
 	}
 	FreeLibraryAndExitThread(hModule, 0);

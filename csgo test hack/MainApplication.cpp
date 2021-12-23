@@ -11,7 +11,11 @@ C_MainApplication::C_MainApplication()
 	this->pRecoilControlSystem = (void*)hack::recoilControlSystemThread;
 	this->pTriggerBot = (void*)hack::triggerBotThread;
 
+	this->pKieroinit = (void*)hack::kieroInit;
+
 	this->hackstate = HACKSTATE_NORMAL;
+	this->imGuiInit = false;
+	this->menuActive = false;
 	this->hModule = null;
 }
 
@@ -48,6 +52,8 @@ void C_MainApplication::initAllModules()
 	this->initModule(this->pRadarHackThread);
 	this->initModule(this->pRecoilControlSystem);
 	this->initModule(this->pTriggerBot);
+
+	this->initModule(this->pKieroinit);
 }
 
 uintptr_t WINAPI hack::mainThread(HMODULE hModule)
@@ -60,6 +66,13 @@ uintptr_t WINAPI hack::mainThread(HMODULE hModule)
 		{
 			MainApplication.hackstate = HACKSTATE_OFF;
 		}
+
+		if (GetAsyncKeyState(settings::keys::menuKey) & 1)
+		{
+			MainApplication.menuActive = !MainApplication.menuActive;
+		}
 	}
+	kiero::shutdown();
+
 	FreeLibraryAndExitThread(hModule, 0);
 }

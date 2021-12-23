@@ -20,7 +20,7 @@ namespace recoilControlSystem
 
 		gameEngine.setViewAngles(resultAngle);
 
-		oPunch = punchAngle;
+		oPunch = punchAngle;	
 	}
 }
 

@@ -6,14 +6,14 @@ namespace aimBot
 	static C_EntityList entityList;
 	static C_GameEngine gameEngine;
 
-	Vec3 getAngle(Vec3 &dest, Vec3 &orig)
+	Vec3 getAngle(Vec3 &orig, Vec3 &dest)
 	{
 		Vec3 delta;
 		delta.x = orig.x - dest.x;
 		delta.y = orig.y - dest.y;
 
-		dest.x = orig.x - delta.x / (5.f * 15);
-		dest.y = orig.y - delta.y / (5.f * 15);
+		dest.x = orig.x - delta.x / 5.f;
+		dest.y = orig.y - delta.y / 5.f;
 
 		return dest;
 	}
@@ -109,7 +109,6 @@ namespace aimBot
 		
 		Vec3 localPlayerPos = localPlayer.getPosition();
 		Vec3 entityBonePos = gameEngine.getBonePos(entity, settings::aimbot::targetBone);
-		entityBonePos.z += *(float*)(LOCALPLAYER + offsets::m_vecViewOffset + 0x8);
 
 		Vec3 angleDifference = calculateAngle(localPlayerPos, entityBonePos);
 		Vec3 myViewAngles = gameEngine.getMyViewAngles();

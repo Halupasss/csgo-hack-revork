@@ -2,6 +2,7 @@
 
 namespace hack
 {
+	// modules
 	uintptr_t __stdcall mainThread(HMODULE hModule);
 	uintptr_t __stdcall bhopThread(HMODULE hModule);
 	uintptr_t __stdcall neonGlowThread(HMODULE hModule);
@@ -10,6 +11,8 @@ namespace hack
 	uintptr_t __stdcall radarHackThread(HMODULE hModule);
 	uintptr_t __stdcall recoilControlSystemThread(HMODULE hModule);
 	uintptr_t __stdcall triggerBotThread(HMODULE hModule);
+	// kiero
+	uintptr_t __stdcall kieroInit(HMODULE hModule);
 }
 
 #ifndef MAINAPPLICATION_H_
@@ -28,8 +31,11 @@ private:
 	void* pRadarHackThread;
 	void* pRecoilControlSystem;
 	void* pTriggerBot;
+	void* pKieroinit;
 public:
 	bool hackstate;
+	bool imGuiInit;
+	bool menuActive;
 public:
 	void run(HMODULE hModule);
 	void initAllModules();

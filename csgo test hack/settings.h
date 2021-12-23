@@ -17,6 +17,7 @@ namespace settings
 		extern size_t jumpButton;
 		extern size_t endButton;
 		extern size_t aimBotKey;
+		extern size_t menuKey;
 	}
 	namespace modules
 	{
