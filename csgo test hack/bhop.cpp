@@ -8,14 +8,20 @@ namespace bhop
 	{
 		int localPlayerHealth = localPlayer.getHealth();
 		int localPlayerFlags = localPlayer.getFlags();
+		Vec3 localPlayerVelocity = localPlayer.getVelocity();
 
-		if (localPlayer.isAlive())
-		{
-			if (localPlayerFlags is cVars::flags::fOnGround)
+		if (localPlayerVelocity.x >= 0.1 or
+			localPlayerVelocity.y >= 0.1 or
+			localPlayerVelocity.z >= 0.1
+		) {
+			if (localPlayer.isAlive())
 			{
-				localPlayer.jump();
+				if (localPlayerFlags is cVars::flags::fOnGround)
+				{
+					localPlayer.jump();
+				}
 			}
-		}
+		}	
 	}
 }
 

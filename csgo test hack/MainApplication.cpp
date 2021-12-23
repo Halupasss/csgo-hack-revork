@@ -61,6 +61,5 @@ uintptr_t WINAPI hack::mainThread(HMODULE hModule)
 			MainApplication.hackstate = HACKSTATE_OFF;
 		}
 	}
-
 	FreeLibraryAndExitThread(hModule, 0);
 }

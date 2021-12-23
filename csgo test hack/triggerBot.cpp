@@ -11,11 +11,17 @@ namespace triggerBot
 
 		C_Entity entity(crosshairID - 1);
 
+		if (not entity.isAlive())
+			return;
+
 		int localPlayerTeamNum = localPlayer.getTeamNum();
 		int entityTeam = entity.getTeamNum();
 
-		localPlayer.shoot();
-		Sleep(settings::triggerBot::delay);
+		if (entityTeam != localPlayerTeamNum)
+		{
+			localPlayer.shoot();
+			Sleep(settings::triggerBot::delay);
+		}	
 	}
 }
 

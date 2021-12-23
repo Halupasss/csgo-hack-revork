@@ -85,3 +85,8 @@ Vec3 C_LocalPlayer::getPosition()
 {
 	return *(Vec3*)(LOCALPLAYER + offsets::m_vecOrigin);
 }
+
+Vec3 C_LocalPlayer::getVelocity()
+{
+	return *(Vec3*)(LOCALPLAYER + offsets::m_vecVelocity);
+}

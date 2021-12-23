@@ -26,6 +26,7 @@ public:
 	void nullifyFlashDuration();
 public: /* data type: Vector3 */
 	Vec3 getPosition();
+	Vec3 getVelocity();
 public:
 	// chekers
 	bool isAlive();
