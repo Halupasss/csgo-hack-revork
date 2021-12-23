@@ -1,8 +1,5 @@
 #pragma once
 
-#define HACKSTATE_NORMAL true
-#define HACKSTATE_OFF    false
-
 namespace hack
 {
 	uintptr_t __stdcall mainThread(HMODULE hModule);
@@ -10,6 +7,9 @@ namespace hack
 	uintptr_t __stdcall neonGlowThread(HMODULE hModule);
 	uintptr_t __stdcall noFlashThread(HMODULE hModule);
 	uintptr_t __stdcall aimbotThread(HMODULE hModule);
+	uintptr_t __stdcall radarHackThread(HMODULE hModule);
+	uintptr_t __stdcall recoilControlSystemThread(HMODULE hModule);
+	uintptr_t __stdcall triggerBotThread(HMODULE hModule);
 }
 
 #ifndef MAINAPPLICATION_H_
@@ -25,6 +25,9 @@ private:
 	void* pNeonGlowThread;
 	void* pNoFlashThread;
 	void* pAimBotThread;
+	void* pRadarHackThread;
+	void* pRecoilControlSystem;
+	void* pTriggerBot;
 public:
 	bool hackstate;
 public:

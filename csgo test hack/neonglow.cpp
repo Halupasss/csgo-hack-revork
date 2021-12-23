@@ -1,10 +1,5 @@
 #include "includes.h"
 
-#define not !
-#define and &&
-#define or ||
-#define is ==
-
 namespace neonGlow
 {
 	static C_LocalPlayer localPlayer;
@@ -19,6 +14,9 @@ namespace neonGlow
 		for (int i = cVars::game::meIndex; i < cVars::game::maxNumOfPlayersInServer; i++)
 		{
 			C_Entity entity(entityList[i]);
+
+			if (not entityList[i])
+				continue;
 
 			int entityHealth = entity.getHealth();
 			int entityTeamNum = entity.getTeamNum();

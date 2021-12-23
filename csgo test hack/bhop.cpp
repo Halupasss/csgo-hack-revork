@@ -1,10 +1,5 @@
 #include "includes.h"
 
-#define not !
-#define and &&
-#define or ||
-#define is ==
-
 namespace bhop
 {
 	static C_LocalPlayer localPlayer;

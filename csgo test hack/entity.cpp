@@ -65,3 +65,12 @@ bool C_Entity::isSpottedByMask()
 
 	return *(int*)(this->entity + offsets::m_bSpottedByMask);
 }
+
+// methods
+void C_Entity::detect()
+{
+	if (this->entity is none)
+		return;
+
+	*(bool*)(this->entity + offsets::m_bSpotted) = TRUE;
+}

@@ -159,6 +159,9 @@
     <ClCompile Include="entityList.cpp" />
     <ClCompile Include="neonglow.cpp" />
     <ClCompile Include="noFlash.cpp" />
+    <ClCompile Include="radarHack.cpp" />
+    <ClCompile Include="recoilControlSystem.cpp" />
+    <ClCompile Include="triggerBot.cpp" />
     <ClCompile Include="varsDefinition.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="localPlayer.cpp" />
@@ -166,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constVars.h" />
+    <ClInclude Include="defines.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="entityList.h" />

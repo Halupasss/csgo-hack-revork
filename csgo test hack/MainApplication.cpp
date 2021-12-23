@@ -1,12 +1,5 @@
 #include "includes.h"
 
-#define null NULL
-#define not !
-#define and &&
-#define or ||
-#define is ==
-#define not_is !=
-
 C_MainApplication::C_MainApplication()
 {
 	this->pMainThread = (void*)hack::mainThread;
@@ -14,6 +7,9 @@ C_MainApplication::C_MainApplication()
 	this->pNeonGlowThread = (void*)hack::neonGlowThread;
 	this->pNoFlashThread = (void*)hack::noFlashThread;
 	this->pAimBotThread = (void*)hack::aimbotThread;
+	this->pRadarHackThread = (void*)hack::radarHackThread;
+	this->pRecoilControlSystem = (void*)hack::recoilControlSystemThread;
+	this->pTriggerBot = (void*)hack::triggerBotThread;
 
 	this->hackstate = HACKSTATE_NORMAL;
 	this->hModule = null;
@@ -49,6 +45,9 @@ void C_MainApplication::initAllModules()
 	this->initModule(this->pNeonGlowThread);
 	this->initModule(this->pNoFlashThread);
 	this->initModule(this->pAimBotThread);
+	this->initModule(this->pRadarHackThread);
+	this->initModule(this->pRecoilControlSystem);
+	this->initModule(this->pTriggerBot);
 }
 
 uintptr_t WINAPI hack::mainThread(HMODULE hModule)

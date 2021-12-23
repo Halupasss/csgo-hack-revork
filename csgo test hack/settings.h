@@ -24,6 +24,13 @@ namespace settings
 		extern bool neonGlow;
 		extern bool noFlash;
 		extern bool aimBot;
+		extern bool radarHack;
+		extern bool recoilControlSystem;
+		extern bool triggerBot;
+	}
+	namespace triggerBot
+	{
+		extern size_t delay;
 	}
 	namespace aimbot
 	{

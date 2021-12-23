@@ -1,10 +1,5 @@
 #include "includes.h"
 
-#define is ==
-#define and &&
-#define or ||
-#define none NULL
-
 namespace noFlash
 {
 	static C_LocalPlayer localPlayer;

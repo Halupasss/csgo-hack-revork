@@ -78,6 +78,15 @@
     <ClCompile Include="aimBot.cpp">
       <Filter>Исходные файлы\hack modules</Filter>
     </ClCompile>
+    <ClCompile Include="radarHack.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
+    <ClCompile Include="recoilControlSystem.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
+    <ClCompile Include="triggerBot.cpp">
+      <Filter>Исходные файлы\hack modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="includes.h">
@@ -109,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="entity.h">
       <Filter>Исходные файлы\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

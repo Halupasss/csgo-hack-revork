@@ -5,6 +5,7 @@
 #include <string>
 
 /* my shit */
+#include "defines.h"
 #include "mainApplication.h"
 #include "vector3.h"
 #include "constVars.h"

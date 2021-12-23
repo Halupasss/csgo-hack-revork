@@ -1,12 +1,5 @@
 #include "includes.h"
 
-#define M_PI 3.14159265358979323846
-#define is ==
-#define or ||
-#define and &&
-#define not !
-#define none NULL
-
 namespace aimBot
 {
 	static C_LocalPlayer localPlayer;
@@ -75,6 +68,9 @@ namespace aimBot
 		{
 			C_Entity entity(entityList[i]);
 
+			if (not entityList[i])
+				continue;
+
 			int entityHealth = entity.getHealth();
 			int entityTeamNum = entity.getTeamNum();
 			int entitySpottedByMask = entity.isSpottedByMask();
@@ -106,11 +102,10 @@ namespace aimBot
 
 	void run()
 	{
-		uintptr_t entity = none;
+		uintptr_t entity = getBestTarget();
 
-		do {
-			entity = getBestTarget();
-		} while (entity is none);
+		if (entity is none)
+			return;
 		
 		Vec3 localPlayerPos = localPlayer.getPosition();
 		Vec3 entityBonePos = gameEngine.getBonePos(entity, settings::aimbot::targetBone);

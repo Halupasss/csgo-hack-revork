@@ -41,6 +41,11 @@ int C_LocalPlayer::getCrosshairID()
 	return *(int*)(LOCALPLAYER + offsets::m_iCrosshairId);
 }
 
+int C_LocalPlayer::getShotsFired()
+{
+	return *(int*)(LOCALPLAYER + offsets::m_iShotsFired);
+}
+
 // setters
 void C_LocalPlayer::setFlag(const uintptr_t flagType, const int flag)
 {

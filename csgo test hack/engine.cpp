@@ -1,10 +1,5 @@
 #include "includes.h"
 
-#define is ==
-#define not !
-#define and &&
-#define none 0
-
 // getters
 uintptr_t C_GameEngine::getGlowManager()
 {
@@ -17,7 +12,7 @@ Vec3 C_GameEngine::getMyViewAngles()
 	return *(Vec3*)(CLIENTSTATE + offsets::dwClientState_ViewAngles);
 }
 
-Vec3 C_GameEngine::getBonePos(uintptr_t& entity, const int bone)
+Vec3 C_GameEngine::getBonePos(uintptr_t& entity, int bone)
 {
 	uintptr_t boneMatrix = this->getBoneMatrix(entity);
 
@@ -30,7 +25,12 @@ Vec3 C_GameEngine::getBonePos(uintptr_t& entity, const int bone)
 	return vBone;
 }
 
-uintptr_t C_GameEngine::getBoneMatrix(uintptr_t &entity)
+Vec3 C_GameEngine::getAimPunchAngle()
+{
+	return *(Vec3*)(LOCALPLAYER + offsets::m_aimPunchAngle);
+}
+
+uintptr_t C_GameEngine::getBoneMatrix(uintptr_t entity)
 {
 	if (entity is none)
 		return NULL;

@@ -1,12 +1,6 @@
 #pragma once
 #include "includes.h"
 
-#define CLIENT (uintptr_t)GetModuleHandle("client.dll")
-#define ENGINE (uintptr_t)GetModuleHandle("engine.dll")
-#define LOCALPLAYER *(uintptr_t*)(CLIENT + offsets::dwLocalPlayer)
-#define LOCALPLAYER_ADDRESS (CLIENT + offsets::dwLocalPlayer)
-#define CLIENTSTATE *(uintptr_t*)(ENGINE + offsets::dwClientState)
-
 #ifndef LOCALPLAYER_H_
 #define LOCALPLAYER_H_
 
@@ -19,6 +13,7 @@ public:
 	int getArmorValue();
 	int getFlags();
 	int getTeamNum();
+	int getShotsFired();
 	int getFlashDuration();
 	int getCrosshairID();
 public:

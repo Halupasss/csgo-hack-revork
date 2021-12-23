@@ -22,5 +22,6 @@ namespace cVars
 		extern size_t maxNumOfPlayersInServer;
 		extern size_t meIndex;
 		extern size_t headBone;
+		extern size_t aimPunchAngleCoefficient;
 	}
 }

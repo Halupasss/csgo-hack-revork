@@ -1,10 +1,6 @@
 #pragma once
 #include "constVars.h"
 
-#define VK_ALT 18
-#define VK_Q 81
-#define VK_E 69
-
 /* const vars */
 
 // bhop
@@ -22,6 +18,7 @@ size_t cVars::memory::playerStructureSize = 0x10;
 size_t cVars::game::maxNumOfPlayersInServer = 64;
 size_t cVars::game::meIndex = 1;
 size_t cVars::game::headBone = 8;
+size_t cVars::game::aimPunchAngleCoefficient = 2;
 
 /* settings   */
 
@@ -35,6 +32,12 @@ bool settings::modules::bhop = true;
 bool settings::modules::neonGlow = true;
 bool settings::modules::noFlash = true;
 bool settings::modules::aimBot = true;
+bool settings::modules::radarHack = true;
+bool settings::modules::recoilControlSystem = true;
+bool settings::modules::triggerBot = true;
+
+// trigger bot
+size_t settings::triggerBot::delay = 65;
 
 // aimbot
 size_t settings::aimbot::vDelay = 50;
