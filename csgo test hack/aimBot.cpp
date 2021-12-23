@@ -11,7 +11,7 @@ namespace aimBot
 {
 	static C_LocalPlayer localPlayer;
 	static C_EntityList entityList;
-	static C_GameEngine engine;
+	static C_GameEngine gameEngine;
 
 	Vec3 getAngle(Vec3 &dest, Vec3 &orig)
 	{
@@ -66,7 +66,7 @@ namespace aimBot
 
 	uintptr_t getBestTarget()
 	{
-		uintptr_t resultTarget = NULL;
+		uintptr_t resultTarget = none;
 
 		float oldDiff = FLT_MAX;
 		float newDiff = NULL;
@@ -90,8 +90,8 @@ namespace aimBot
 			if (not (entitySpottedByMask & (1 << localPlayerCrosshairID)) && settings::aimbot::aimTroughWalls)
 				continue;
 
-			Vec3 entityHeadBonePos = engine.getBonePos(entityList[i], settings::aimbot::targetBone);
-			Vec3 myViewAngles = engine.getMyViewAngles();
+			Vec3 entityHeadBonePos = gameEngine.getBonePos(entityList[i], settings::aimbot::targetBone);
+			Vec3 myViewAngles = gameEngine.getMyViewAngles();
 			Vec3 angleDifference = calculateAngle(myViewAngles, entityHeadBonePos);
 
 			newDiff = angleDifference.x;
@@ -106,19 +106,21 @@ namespace aimBot
 
 	void run()
 	{
-		uintptr_t entity = getBestTarget();
+		uintptr_t entity = none;
 
-		C_Entity mEntity(entity);
-
+		do {
+			entity = getBestTarget();
+		} while (entity is none);
+		
 		Vec3 localPlayerPos = localPlayer.getPosition();
-		Vec3 entityBonePos = engine.getBonePos(entity, settings::aimbot::targetBone);
+		Vec3 entityBonePos = gameEngine.getBonePos(entity, settings::aimbot::targetBone);
 		entityBonePos.z += *(float*)(LOCALPLAYER + offsets::m_vecViewOffset + 0x8);
 
 		Vec3 angleDifference = calculateAngle(localPlayerPos, entityBonePos);
-		Vec3 myViewAngles = engine.getMyViewAngles();
+		Vec3 myViewAngles = gameEngine.getMyViewAngles();
 		Vec3 resultAngles = normalizeAngles(angleDifference);
 
-		engine.setViewAngles(getAngle(myViewAngles, resultAngles));
+		gameEngine.setViewAngles(getAngle(myViewAngles, resultAngles));
 	}
 }
 
@@ -128,7 +130,10 @@ uintptr_t __stdcall hack::aimbotThread(HMODULE hModule)
 	{
 		if (settings::modules::aimBot)
 		{
-			aimBot::run();
+			if (GetAsyncKeyState(settings::keys::aimBotKey))
+			{
+				aimBot::run();
+			}
 		}
 	}
 	FreeLibraryAndExitThread(hModule, 0);

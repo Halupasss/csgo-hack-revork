@@ -9,6 +9,7 @@ class C_GameEngine
 public:
 	// getters
 	uintptr_t getGlowManager();
+	uintptr_t getBoneMatrix(uintptr_t& entity);
 public:
 	// setters
 	void setViewAngles(Vec3 angle);

@@ -2,10 +2,21 @@
 
 namespace settings
 {
+	namespace fun
+	{
+		namespace qe
+		{
+			extern int maxAngle;
+			extern int minAngle;
+			extern size_t leftKey;
+			extern size_t rightKey;
+		}
+	}
 	namespace keys
 	{
 		extern size_t jumpButton;
 		extern size_t endButton;
+		extern size_t aimBotKey;
 	}
 	namespace modules
 	{

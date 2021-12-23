@@ -1,6 +1,10 @@
 #pragma once
 #include "constVars.h"
 
+#define VK_ALT 18
+#define VK_Q 81
+#define VK_E 69
+
 /* const vars */
 
 // bhop
@@ -21,9 +25,10 @@ size_t cVars::game::headBone = 8;
 
 /* settings   */
 
-// buttons
+// keys
 size_t settings::keys::endButton = VK_END;
 size_t settings::keys::jumpButton = VK_SPACE;
+size_t settings::keys::aimBotKey = VK_ALT;
 
 // modules
 bool settings::modules::bhop = true;
@@ -44,3 +49,11 @@ float settings::neonGlow::myTeam::color[3] = { 0, 1, 1 };
 // entity team
 float settings::neonGlow::entityTeam::alpha = 1.7;
 float settings::neonGlow::entityTeam::color[3] = { 1, 0, 1 };
+
+// fun
+
+// qe
+int settings::fun::qe::maxAngle = 25;
+int settings::fun::qe::minAngle = -25;
+size_t settings::fun::qe::leftKey = VK_Q;
+size_t settings::fun::qe::rightKey = VK_E;

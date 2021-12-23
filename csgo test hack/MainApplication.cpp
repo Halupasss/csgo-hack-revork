@@ -12,6 +12,9 @@ C_MainApplication::C_MainApplication()
 	this->pMainThread = (void*)hack::mainThread;
 	this->pBhopThread = (void*)hack::bhopThread;
 	this->pNeonGlowThread = (void*)hack::neonGlowThread;
+	this->pNoFlashThread = (void*)hack::noFlashThread;
+	this->pAimBotThread = (void*)hack::aimbotThread;
+
 	this->hackstate = HACKSTATE_NORMAL;
 	this->hModule = null;
 }
